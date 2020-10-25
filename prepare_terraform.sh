@@ -57,7 +57,7 @@ aws s3api put-public-access-block \
     --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"
   
 # runs prepare_backend script - creates config for remote state
-sh ./prepare_backend.sh $ENVIRONMENT
+sh ./prepare_backend.sh $ENVIRONMENT $PROJECT
 
 # creates tfvars directory if not exists yet
 mkdir -p tfvars
